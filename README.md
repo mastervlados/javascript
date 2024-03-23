@@ -5,3 +5,4 @@
 | :---: | :---: | :---: | :--- | :--- |
 | 001 | GeekBrains | 2024 | Основы Javascript | `gb-001-homework`
 | 002 | GeekBrains | 2024 | JavaScript про ECMAScript | `gb-002-homework`
+| 003 | GeekBrains | 2024 | Продвинутый JavaScript | `gb-003-homework`
