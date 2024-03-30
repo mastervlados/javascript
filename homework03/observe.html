@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observe Feedback</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/LocalStorageService.js" defer></script>
+    <script src="js/observe.js" defer></script>
+</head>
+<body>
+    <!-- 
+        Страница просмотра отзывов:
+
+        Показывает список всех продуктов, о которых были оставлены отзывы.
+        При клике на название продукта отображается список всех отзывов по этому продукту.
+        Возможность удаления отзыва (при нажатии на кнопку "Удалить" рядом с отзывом, данный отзыв удаляется из LocalStorage). 
+    -->
+    <div class="wrapper">
+        <nav class="menu">
+            <li><a href="index.html" class="menu__link">Home</a></li>
+            <li><a href="add.html" class="menu__link">Create Feedback</a></li>
+            <li><a href="observe.html" class="menu__link menu__link_active">Feedback List</a></li>
+        </nav>
+        <div class="container">
+            <div id="feedback-list">
+                <!-- 
+                    <details class="product" open>
+                        <summary class="product__name">Apple iPhone 13</summary>
+                        <article class="feedback__container">
+                            <p class="feedback__details"><span>Author</span> | date</p>
+                            <p class="feedback__text">text</p>
+                            <button class="delete-feedback" onclick="">X</button>
+                        </article>
+                    </details> 
+                -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Feedback</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/LocalStorageService.js" defer></script>
+    <script src="js/add.js" defer></script>
+</head>
+<body>
+    <!-- 
+        Страница добавления отзыва:
+
+        Поле для ввода названия продукта.
+        Текстовое поле для самого отзыва.
+        Кнопка "Добавить отзыв", которая сохраняет отзыв о продукте в LocalStorage. 
+    -->
+    <div class="wrapper">
+        <nav class="menu">
+            <li><a href="index.html" class="menu__link">Home</a></li>
+            <li><a href="add.html" class="menu__link menu__link_active">Create Feedback</a></li>
+            <li><a href="observe.html" class="menu__link">Feedback List</a></li>
+        </nav>
+        <div class="container">
+            <form class="feedback-area">
+                <select name="product" id="product-select">
+                    <!-- 
+                    <option value="id#?1">Product Label 1</option>
+                    <option value="id#?2">Product Label 2</option> 
+                    -->
+                </select>
+                <textarea name="" id="feedback-area__text" rows="15"></textarea>
+                <button type="submit" id="publish-feedback-button">Add</button>
+            </form>
+        </div>        
+    </div>
+</body>
+</html>
