@@ -1,0 +1,22 @@
+.wrapper {
+    margin: 10vh auto;
+}
+
+.field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.date-field {
+    height: 55px;
+}
+
+.time-field {
+    height: 100%;
+}
+
+.row {
+    margin-bottom: 20px;
+}
