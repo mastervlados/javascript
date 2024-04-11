@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+}
+
+#feed {
+    max-width: 640px;
+    margin: 10vh auto;
+}
+
+.photo {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.photo__image-container {
+    width: inherit;
+    height: 360px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #333333;
+}
+
+.photo__image {
+    width: auto;
+    height: 100%;
+}
+
+.photo__details {
+    color: #333333;
+    padding: 25px;
+    position: relative;
+}
+
+.photo__author {
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+}
+
+.photo__description {
+    font-size: 0.8rem;
+}
+
+.photo__counters {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.photo__counter {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.photo__like-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.photo__counter i {
+    font-size: 1.25rem;
+}
