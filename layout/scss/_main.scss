@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: $textCommon;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  // hide scroll bar (but user can scroll down)
+  // fix problem with lines printing
+  // scss cant take the window width
+  // without default (browser) scrollbar width value
+  display: none;
+}
+
+body {
+  @include background-lines(#E6E6E6, 4);
+  background-color: $bodyColor;
+}
+
+.wrapper {
+  max-width: $defaultMaxWidth;
+  margin: 0 auto;
+}
+
+.heading-s {
+  @include apply-font("DM Serif Display", 25px, 400);
+  color: $textCommonAlternate;
+}
+
+.heading-m {
+  @include apply-font("DM Serif Display", 50px, 400);
+  color: $textCommonAlternate;
+}
+
+.text-s {
+  @include apply-font("Jost", 18px, 400);
+  color: $textCommon;
+}
+
+.text-m {
+  @include apply-font("Jost", 22px, 400);
+  color: $textCommon;
+}
+
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: $textCommonAlternate;
+  border-radius: 18px;
+}
+

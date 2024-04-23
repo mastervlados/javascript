@@ -1,0 +1,284 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__label {
+    color: $textCommonAlternate;
+    @include apply-font("DM Serif Display", 40px, 400);
+  }
+}
+
+.nav-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 55px 0;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  
+    & .menu__link {
+      color: $textCommonAlternate;
+      @include apply-font("Jost", 20px, 400);
+    }
+  }
+}
+
+.promo {
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  height: 758px;
+  display: flex;
+  align-items: center;
+
+  &__image {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    z-index: 222;
+  }
+
+  &__content {
+    position: relative;
+    width: 434px;
+    left: 52px;
+    z-index: 333;
+  }
+
+  &__title {
+    @include apply-font("DM Serif Display", 65px, 400);
+    color: $textCommonAlternate;
+  }
+
+  &__text {
+    margin: 18px 0 21px 0;
+  }
+
+  &__btn {
+    padding: 26px 48px;
+
+    & span {
+      @include apply-font("Jost", 18px, 600);
+      color: #FFFFFF;
+    }
+  }
+}
+
+.projects {
+  margin-bottom: 100px;
+
+  &__content-header {
+    margin: 93px auto;
+    max-width: 737px;
+    text-align: center;
+  }
+
+  &__description {
+    margin-top: 8px;
+  }
+
+  &__container {
+    display: flex;
+    row-gap: 56px;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.project {
+
+  &__image {
+    margin-bottom: 28px;
+
+    &_top-left {
+      border-top-right-radius: 50px;
+    }
+    &_top-right {
+      border-top-left-radius: 50px;
+    }
+    &_bottom-left {
+      border-bottom-right-radius: 50px;
+    }
+    &_bottom-right {
+      border-bottom-left-radius: 50px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    background: $themeColorLevelOne;
+  }
+}
+
+.counter {
+  padding: 151px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-area {
+    background: $themeColorLevelOne;
+  }
+
+  & li {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 0 75px;
+    border-right: 1px solid $textGentle;
+
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+
+    &:nth-last-child(1) {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+
+  &__value {
+    @include apply-font("DM Serif Display", 85px, 400);
+    color: $textGentle;
+  }
+}
+
+.blog-presenter {
+
+  &__content-header {
+    margin: 96px auto 52px auto;
+    max-width: 805px;
+    text-align: center;
+  }
+
+  &__description {
+    margin-top: 8px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.post-preview {
+  padding: 21px;
+  border: 1px solid #E7E7E7;
+  border-radius: 50px;
+  max-width: 382px;
+  height: 521px;
+  position: relative;
+
+  &__arc {
+    position: relative;
+  }
+
+  &__image {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  &__btn-action {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    padding: 4px 10px 8px 10px;
+    color: $textCommon;
+    @include apply-font("Jost", 16px, 400);
+  }
+
+  &__title {
+    max-width: 305px;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 21px;
+    left: 21px;
+    right: 21px;
+  }
+
+  &__date {
+    color: $textCommon;
+    @include apply-font("Jost", 16px, 400);
+  }
+
+  &_accent {
+    background: $themeColorLevelOne;
+  }
+
+  &__btn_accent {
+    background: #FFFFFF;
+  }
+}
+
+.footer {
+  margin-top: 96px;
+  min-height: 305px;
+  display: flex;
+  justify-content: space-between;
+
+  &__col {
+    max-width: 290px;
+  }
+
+  &__description {
+    margin-top: 18px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 54px;
+    margin-top: 31px;
+  }
+
+  &__heading {
+    margin-bottom: 26px;
+  }
+
+  &__pages {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__email {
+    display: block;
+    margin: 30px 0;
+  }
+}

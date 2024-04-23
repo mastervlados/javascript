@@ -1,0 +1,124 @@
+.blog-content {
+  display: flex;
+  justify-content: space-between;
+
+  &-feed {
+    width: 799px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &-sidebar {
+    width: 345px;
+
+    &__content {
+      margin-top: 24px;
+    }
+  }
+}
+
+.pick-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  & input[type=checkbox] {
+    display: none;
+  }
+
+  & label {
+    cursor: pointer;
+    padding: 9px 30px;
+    border-radius: 10px;
+    background: $themeColorLevelOne;
+    color: $textCommonAlternate;
+    @include apply-font("Jost", 18px, 400);
+  }
+
+  & input:checked + label {
+    background: $textCommonAlternate;
+    color: #FFFFFF;
+  }
+}
+
+.post-target {
+
+  &__image {
+    margin-top: 11px;
+    border-radius: 50px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    @include apply-font("Jost", 16px, 400);
+    color: $textCommon;
+    margin: 48px 0;
+  }
+}
+
+.post-meta {
+  display: flex;
+  gap: 10px;
+  margin-right: 50px;
+}
+
+.post-quote {
+  quotes: '' '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50px;
+  background: $themeColorLevelOne;
+  padding: 0px 227px 53px 227px;
+  margin-top: 35px;
+
+  &__commas {
+    display: block;
+    @include apply-font("DM Serif Display", 200px, 400, true);
+    color: $textGentle;
+    transform: rotate(180deg);
+    line-height: 150px;
+  }
+
+  & span {
+    display: block;
+    @include apply-font("DM Serif Display", 25px, 400, true);
+    color: $textGentle;
+  }
+}
+
+.post-feed {
+
+  &__text {
+    margin-top: 30px;
+  }
+
+  &__image {
+    border-radius: 50px;
+    margin: 50px 0;
+  }
+}
+
+.numeric-list {
+  list-style-type: decimal;
+  counter-reset: item;
+
+  & li {
+    margin-top: 24px;
+    position: relative;
+    margin-left: 34px;
+    max-width: 77%;
+  }
+
+  & li::before  {
+    position: absolute;
+    left: -32px;
+    content: counter(item) "";
+    counter-increment: item;
+    @include apply-font("DM Serif Display", 20px, 400);
+    color: $textGentle;
+  }
+}

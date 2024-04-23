@@ -1,0 +1,49 @@
+.gallery {
+  columns: 2 auto;
+  column-gap: 30px;
+
+  &-area {
+    margin-bottom: 200px;
+  }
+
+  &__filter {
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 61px;
+    border: 1px solid $textGentle;
+    border-radius: 10px;
+
+    & input[type=radio] {
+      display: none;
+
+      &:checked + label {
+        background: $textGentle;
+        border-radius: 10px;
+        color: #FFFFFF;
+        @include apply-font("Jost", 18px, 600);
+      }
+    }
+
+    & label {
+      display: inline-block;
+      padding: 26px 66px;
+      color: $textCommonAlternate;
+      @include apply-font("Jost", 18px, 600);
+    }
+  }
+
+  & .project {
+    display: inline-block;
+    margin-bottom: 30px;
+    position: relative;
+
+    &_star {
+      &::after {
+        content: url('../images/star.png');
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.banner {
+  position: relative;
+  height: 356px;
+  margin-bottom: 200px;
+
+  &__image {
+    position: absolute;
+  }
+
+  &__container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__box {
+    background: #FFFFFF;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    padding: 41px 78px;
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.latest-post {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px;
+  border-radius: 50px;
+  border: 1px solid #E7E7E7;
+  margin-bottom: 156px;
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    border-radius: 30px;
+    width: 569px;
+    height: 478px;
+    overflow: hidden;
+  }
+
+  &__details {
+    width: 489px;
+    margin-right: 35px;
+    margin-top: 50px;
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    max-width: 469px;
+  }
+
+  &__text {
+    max-width: 469px;
+  }
+}
+
+.pagination {
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  width: max-content;
+  margin-top: 50px;
+
+  &__button {
+    @include apply-font("Jost", 16px, 500);
+    color: $textCommonAlternate;
+    width: 52px;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1px solid $textGentle;
+    border-radius: 100%;
+
+    &_active {
+      border: none;
+      background: $themeColorLevelOne;
+    }
+  }
+}

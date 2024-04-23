@@ -1,0 +1,37 @@
+@mixin background-lines($color, $count) {
+  $firstLinePositionWidth: calc((100vw - $defaultMaxWidth) / 2);
+  // always will be less than the total count of lines
+  // if we have 4 lines, means we have 3 spaces between
+  $spaceBetweenEachLine: calc($defaultMaxWidth / ($count - 1));
+  $linearGradients: ();
+
+  @for $i from 0 to $count {
+    $linearGradients: append(
+      $linearGradients, 
+      linear-gradient(90deg, $color 1px, transparent 1px) calc($firstLinePositionWidth + ($spaceBetweenEachLine * $i)), 
+      "comma"
+    );
+  }
+  
+  background: $linearGradients;
+}
+
+@mixin apply-font($fontFamily, $size, $fontWeight, $isFontStyleItalic: false) {
+  $fontType: map-get((
+    "DM Serif Display": serif,
+    "Jost": sans-serif,
+    "Oswald": sans-serif,
+    "Syne": sans-serif,
+  ), $fontFamily);
+
+  font-family: $fontFamily, $fontType;
+  font-size: $size;
+  font-weight: $fontWeight;
+
+  @if $isFontStyleItalic {
+    font-style: italic;
+  }
+  @else {
+    font-style: normal;
+  }
+}
